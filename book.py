@@ -36,15 +36,21 @@ def deleteBook(id):
     db.session.commit()
     return redirect(url_for("index"))
 
-@app.route("/edit/<string:id>")
-def editBook(id):
-    book = Book.query.filter_by(id=id).first()
-    db.session.commit()
-    return render_template("edit.html", book = book)
-
 @app.route("/detail/<string:id>")
 def detailBook(id):
     book = Book.query.filter_by(id=id).first()
+    return render_template("detail.html", book = book)
+
+@app.route("/edit/<string:id>", methods=["POST"])
+def editBook(id):
+    book = Book.query.filter_by(id=id).first()
+    
+    book.title = request.form.get("editTitle")
+    book.author = request.form.get("editAuthor")
+    book.body = request.form.get("editBody")
+    book.pub_date = request.form.get("editYear")
+
+    db.session.commit()
     return render_template("detail.html", book = book)
 
 @app.route("/author/<string:author>")

@@ -1,4 +1,4 @@
-# library
+# Library
 LibraryApp with Flask&amp;SqlAlchemy&amp;Sqlite
 
 
@@ -6,6 +6,11 @@ LibraryApp with Flask&amp;SqlAlchemy&amp;Sqlite
 ```
 $ pip3 install -r ./requirements.txt
 ```
+##### Inside the folder, run:
+```
+  python book.py
+```
+##### Then Open *localhost:5000*
 
 ### Image of Main Page:
 
