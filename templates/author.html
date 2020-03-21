@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/5fcd95f45a.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container mx-auto px-8">
+    <nav>
+      <div class=" bg-white p-3 border-solid border-b-2 border-black">
+        <h3 style="font-family: 'Allura', cursive;" class="text-6xl font-medium text-center mx-auto" >Library</h3>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container mx-auto px-8 p-2">
+    <div class="text-3xl flex justify-around">Book(s) From {{author}}</div>
+    <div class="flex justify-center">
+      <a href="/" class="object-none object-bottom my-2 px-20 bg-teal-600 hover:bg-transparent p-1 border border-transparent hover:border-teal-600 text-white hover:text-teal-600 rounded">Main</a>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+    {% for book in booksAuthor %}    
+        <div class="w-64 h-128 rounded overflow-hidden shadow-lg my-3 mx-auto">
+          <img class="w-64 h-24" src={{ url_for('static', filename = 'css/img/img3.jpg') }} alt="Sunset in the mountains">
+          <div class="px-6 pt-4 text-center">
+            <div class="font-bold text-xl mb-2 h-4">{{book.title}}</div>
+          </div>
+          <div class="px-6 pt-10 text-center">
+            <p class="text-gray-700 text-base h-16 py-2">
+              {{book.body[0:45]}}...
+            </p>
+          </div>
+          <div class="px-6 py-2 text-center">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"><a href="/author/{{book.author}}">#{{book.author}}</a></span>
+          </div>
+          <div class="px-6 py-2 text-center">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2"><a href="/year/{{book.pub_date}}">#{{book.pub_date}}</a></span>
+          </div>
+          <div class="px-6 py-4 text-center">
+            <a href="/detail/{{book.id}}" class="object-none object-bottom mx-auto px-6 bg-transparent hover:bg-blue-500 p-3 border border-blue-500 hover:border-transparent text-blue-500 hover:text-white rounded">Detail</a>
+            <a href="/delete/{{book.id}}" class="object-none object-bottom mx-auto px-6 bg-transparent hover:bg-red-500 p-3 border border-red-500 hover:border-transparent text-red-500 hover:text-white rounded">Delete</a>
+          </div>
+        </div>
+      {% endfor %}  
+    </div>
+    
+  </div>
+
+  <div class="container mx-auto px-8 p-2 mt-8">
+    <footer>
+        <div class=" bg-white pt-1 border-solid border-t border-black">
+          <p class="font-mono text-sm mx-auto text-center">
+            &copy;2020 Library Corp. All rights reserved.
+          </p>
+        </div>
+    </footer>
+  </div>
+</body>
+</html>

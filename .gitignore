@@ -1,0 +1,12 @@
+# Node modules removed
+node_modules/*
+
+#pycache remove
+__pycache__/*
+
+#json files used for gh-pages removed
+package-lock.json
+package.json
+
+#No need to have db file in repository
+book.db
