@@ -1,6 +1,11 @@
 # Library
 LibraryApp with Flask&amp;SqlAlchemy&amp;Sqlite
 
+
+### Installation
+```
+$ pip3 install -r ./requirements.txt
+```
 ##### Inside the folder, run:
 ```
   python book.py
