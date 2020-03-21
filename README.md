@@ -8,7 +8,7 @@ $ pip3 install -r ./requirements.txt
 ```
 ##### Inside the folder, run:
 ```
-  python book.py
+$ Spython book.py
 ```
 ##### Then Open *localhost:5000*
 =======
