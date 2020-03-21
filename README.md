@@ -1,6 +1,12 @@
 # library
 LibraryApp with Flask&amp;SqlAlchemy&amp;Sqlite
 
+
+### Installation
+```
+$ pip3 install -r ./requirements.txt
+```
+
 ### Image of Main Page:
 
 ![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/index.png)
