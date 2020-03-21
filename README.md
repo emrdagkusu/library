@@ -1,5 +1,11 @@
-# library
+# Library
 LibraryApp with Flask&amp;SqlAlchemy&amp;Sqlite
+
+##### Inside the folder, run:
+```
+  python book.py
+```
+##### Then Open *localhost:5000*
 
 ### Image of Main Page:
 
