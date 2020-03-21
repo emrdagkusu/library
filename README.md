@@ -13,10 +13,6 @@ $ pip3 install -r ./requirements.txt
 ##### Then Open *localhost:5000*
 =======
 
-### Installation
-```
-$ pip3 install -r ./requirements.txt
-```
 
 ### Image of Main Page:
 
