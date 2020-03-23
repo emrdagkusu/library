@@ -2,8 +2,9 @@
 
 {% block content %}
   <div class="container mx-auto px-8">
-    <div class="font-mono text-center p-4">
+    <div class="font-mono text-center p-4 flex justify-around">
       <button class="modal-open bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"><p class="mx-8">Add Book</p></button>
+      <a class="bg-black hover:bg-transparent text-white font-semibold hover:text-black py-2 px-12 border border-transparent hover:border-black rounded" href="/logout">Log Out</a>
     </div>
     <!--Modal-->
     <div class="modal opacity-0 pointer-events-none fixed w-full h-full top-0 left-0 flex items-center justify-center">
@@ -80,7 +81,7 @@
     </div>
   </div>
 
-  {% if  books == [] %}
+  {% if books == [] %}
     <div class="container mx-auto py-32 px-64">
       <div class="bg-transparent border-t-2 border-b-2 border-black text-black px-4 py-3" role="alert">
         <p class="text-xl text-center font-bold">No Book!</p>

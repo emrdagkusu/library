@@ -13,14 +13,17 @@ $ python book.py
 ##### Then Open *localhost:5000*
 =======
 
+### Image of Login Page:
 
-### Image of Main Page:
+![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/login.png)
 
-![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/index.png)
+### Image of Home Page:
+
+![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/homepage.png)
 
 ### Image of Add Book Form:
 
-![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/addBook.png)
+![alt text](https://github.com/emrdagkusu/library/blob/master/projectImages/addingBook.png)
 
 ### Image of Detail Page:
 
