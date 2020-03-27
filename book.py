@@ -25,7 +25,7 @@ def index():
         return render_template('login.html', form = form)
     else:
         books = Book.query.filter_by(userID = current_user.id)
-        return render_template('index.html', books = books)
+        return render_template('index.html', books = books.all())
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
